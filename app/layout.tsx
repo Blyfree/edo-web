@@ -1,11 +1,16 @@
-import './globals.css'
-import Link from 'next/link'
+import './globals.css';
+import Link from 'next/link';
+import React from 'react';
 export const metadata = {
   title: 'NextBridge - Study & Work Abroad',
   description: 'Helping students and workers go abroad with confidence.',
 }
 
-export default function RootLayout({ children }) {
+type RootLayoutProps = {
+  children: React.ReactNode;
+};
+
+export default function RootLayout({ children } : RootLayoutProps){
   return (
     <html lang="en">
       <body className="flex flex-col min-h-screen font-sans bg-white text-gray-900">
@@ -14,7 +19,7 @@ export default function RootLayout({ children }) {
           <nav className="max-w-6xl mx-auto flex justify-between items-center">
             <h1 className="text-xl font-bold">NextBridge</h1>
             <div className="space-x-4">
-            <a href="/" className="hover:underline">Trang Chủ</a>
+            <Link href="/" className="hover:underline">Trang Chủ2</Link>
 
         <Link href="/about" className="hover:underline">Giới Thiệu</Link>
 
